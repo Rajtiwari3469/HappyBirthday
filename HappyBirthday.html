@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday </title>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        font-family: 'Comic Sans MS', cursive;
+        overflow: hidden;
+    }
+
+    .card {
+        background: #fff;
+        width: 380px;
+        padding: 30px;
+        border-radius: 25px;
+        text-align: center;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+        animation: pop 1s ease-in-out;
+    }
+
+    h1 {
+        color: #ff4d6d;
+        font-size: 32px;
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        color: #6a5acd;
+        font-size: 26px;
+        margin-top: 0;
+    }
+
+    .balloons {
+        font-size: 32px;
+        animation: float 2s infinite alternate;
+    }
+
+    .gift-box {
+        font-size: 70px;
+        cursor: pointer;
+        animation: shake 1.5s infinite;
+        margin: 20px 0;
+    }
+
+    .message {
+        display: none;
+        font-size: 16px;
+        color: #444;
+        background: #fff3f6;
+        padding: 15px;
+        border-radius: 15px;
+        margin-top: 15px;
+        animation: reveal 1s ease-in-out;
+    }
+
+    .cartoon {
+        font-size: 38px;
+        margin-top: 15px;
+    }
+
+    @keyframes float {
+        from { transform: translateY(0); }
+        to { transform: translateY(-12px); }
+    }
+
+    @keyframes shake {
+        0% { transform: rotate(0); }
+        25% { transform: rotate(5deg); }
+        50% { transform: rotate(0); }
+        75% { transform: rotate(-5deg); }
+        100% { transform: rotate(0); }
+    }
+
+    @keyframes reveal {
+        from {
+            transform: scale(0.5);
+            opacity: 0;
+        }
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    @keyframes pop {
+        0% {
+            transform: scale(0.4);
+            opacity: 0;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<!-- 🎵 Background Music -->
+<audio autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<div class="card">
+    <div class="balloons">🎈 🎉 🎈</div>
+
+    <h1>Happy Birthday</h1>
+    <h2>Roohini 🎂</h2>
+
+    <p>Tap the gift to open your surprise 🎁</p>
+
+    <div class="gift-box" onclick="openGift()">🎁</div>
+
+    <div class="message" id="msg">
+        💖 Dear Roohini 💖<br><br>
+        May your life be filled with joy, success, love, and endless smiles ✨  
+        Keep shining like the beautiful star you are 🌟  
+        Enjoy your special day to the fullest 🎉🎂
+        (I couldn’t give you a physical gift, but I’ve tried to make this digital card the best gift for you. 💖✨)
+    </div>
+
+    <div class="cartoon">🧸 🎀 🧁</div>
+</div>
+
+<script>
+    function openGift() {
+        document.getElementById("msg").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
